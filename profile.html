@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">RealBreakRoom</div>
+        <div class="nav-links">
+            <a href="landing.html">Home</a>  <!-- Updated Home link -->
+            <a href="#">Settings</a>
+        </div>
+    </header>
+    
+    <main>
+        <!-- Profile Selection -->
+        <div class="choose-profile-container" id="choose-profile-container">
+            <h2>Choose a Profile</h2>
+            <div class="predefined-profiles">
+                <!-- Profiles will be dynamically loaded here -->
+            </div>
+            <button class="create-profile-button">Create New Profile</button>
+
+            <!-- Create Profile Section (Initially Hidden) -->
+            <div class="create-profile-container hidden" id="create-profile-container">
+                <h2>Create a New Profile</h2>
+                <form id="create-profile-form">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    
+                    <label for="avatar" class="upload-label">Upload Avatar Image</label>
+                    <input type="file" id="avatar" name="avatar" accept="image/*" required>
+                    
+                    <button type="submit" class="submit-button">Create Profile</button>
+                </form>
+                <button class="back-button">Back to Profiles</button>
+            </div>
+        </div>
+
+        <!-- Selected Profile -->
+        <div class="profile-container hidden" id="profile-container">
+            <img src="avatar_1.png" alt="Profile Avatar" class="profile-image">
+            <div class="profile-name">Welcome, John!</div>
+            <button class="start-button">Start</button>
+            <button class="back-button">Back to Profiles</button>
+        </div>
+    </main>
+</body>
+</html>

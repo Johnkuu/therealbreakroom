@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .landing-container {
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #D0AA81;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        header .logo {
+            font-family: 'Rock Salt', cursive;
+            font-size: 24px;
+            font-weight: bold;
+            color: black;
+        }
+
+        header .language-selector {
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            font-weight: bold;
+            color: black;
+        }
+
+        header .language-selector .icon {
+            margin-right: 5px;
+        }
+
+        main {
+            margin-top: 50px;
+        }
+
+        main h1 {
+            font-size: 48px;
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            color: black;
+            margin-bottom: 20px;
+        }
+
+        main .start-button {
+            font-size: 18px;
+            padding: 10px 20px;
+            background-color: #D0AA81;
+            border: none;
+            border-radius: 20px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        main .start-button:hover {
+            background-color: #C49871;
+        }
+
+        /* General style for the dropdown */
+        .language-selector {
+            position: relative;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .language-selector select {
+            background-color: transparent;
+            border: 1px solid #D0AA81;
+            padding: 8px 15px;
+            border-radius: 5px;
+            color: #333;
+            font-family: 'Rock Salt', cursive;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .language-selector select:focus {
+            outline: none;
+        }
+
+        .language-selector:hover select {
+            border-color: #D0AA81;
+        }
+
+        /* Optional: Adding a little padding to the icon */
+        .language-selector .icon {
+            margin-right: 5px;
+        }
+
+        /* Make the button look smooth for both desktop and mobile */
+        .language-selector select option {
+            padding: 8px;
+            background-color: #f9f9f9;
+            border: none;
+            cursor: pointer;
+            font-weight: bold; /* Makes the text bold */
+        }
+
+        .language-selector select option:hover {
+            background-color: #D0AA81;
+            color: white;
+        }
+
+        /* Make the currently selected option bold */
+        .language-selector select option:checked {
+            font-weight: bold;
+            background-color: #D0AA81;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="landing-container">
+        <header>
+            <div class="logo">RealBreakRoom</div>
+            <div class="language-selector">
+                <span class="icon">&#127760;</span> 
+                <select id="language-dropdown" class="language-dropdown">
+                    <option value="en">English</option>
+                    <option value="es">Espanol</option>
+                    <option value="fr">Francais</option>
+                    <option value="de">Deutsch</option>
+                    <option value="it">Italiano</option>
+                </select>
+            </div>
+        </header>
+        <main>
+            <h1>Welcome! :)</h1>
+            <a href="profile.html">
+                <button class="start-button">Start</button>
+            </a>
+        </main>
+    </div>
+
+    <script>
+        // Optional: Handle language selection
+        document.getElementById("language-dropdown").addEventListener("change", (e) => {
+            const selectedLanguage = e.target.value;
+            alert(`Language changed to: ${selectedLanguage}`);
+            // Implement language content change functionality here
+        });
+    </script>
+</body>
+</html>

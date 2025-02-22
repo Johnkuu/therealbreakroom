@@ -1,0 +1,6 @@
+[
+    {
+        "name": "John",
+        "avatar": "data:image/png;base64,iVBORw0..."
+    }
+]
